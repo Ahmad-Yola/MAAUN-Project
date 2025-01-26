@@ -1,0 +1,145 @@
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: #f1f1f1;
+  height: 70vh;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: -20px;
+}
+.header img {
+  height: 93px;
+  width: 90px;
+}
+.header h2 {
+  font-size: 1.2em;
+  color: #0055ff;
+  font-weight: 500;
+}
+.form-container h2 {
+  font-size: 1.3em;
+  font-weight: 600;
+  text-align: center;
+  color: #ff1010;
+  margin-bottom: 20px;
+}
+.form-container .secure {
+  color: #02e032;
+}
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-container .bi-exclamation-triangle-fill {
+  color: rgb(255, 0, 0);
+  font-size: 1.43em;
+  text-align: center;
+  display: block;
+}
+
+.form-container .bi-shield-fill-check {
+  color: rgb(11, 234, 30);
+  font-size: 1.43em;
+  text-align: center;
+  display: block;
+}
+
+label {
+  display: block;
+  font-size: 1em;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+label span {
+  color: green;
+  font-weight: 100;
+}
+
+label span code {
+  color: rgba(255, 0, 0, 0.895);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #333;
+  outline: none;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1em;
+  margin: 0 auto;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Manrope", sans-serif;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+form p {
+  font-size: 0.94em;
+  color: gray;
+}
+
+/* Notification styles */
+.notification {
+  position: fixed;
+  top: 10px;
+  right: -300px; /* Hidden by default */
+  width: 250px;
+  background-color: #28a745; /* Green for success */
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: right 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+.notification.error {
+  background-color: #dc3545; /* Red for error */
+}
+
+.notification.show {
+  right: 10px; /* Slide in from the right */
+}
+
+@media screen and (min-width: 1024px) {
+  .header img {
+    height: 110px;
+    width: 105px;
+  }
+}
