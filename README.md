@@ -52,6 +52,8 @@ $conn->close();
 
 ### Demonstration of the Attack
 
+A link to access the online version of the project is attached down below for self test..
+
 To demonstrate the SQL injection vulnerability, use the following payload in the email field:
 
 ' OR 1=1-- (MAKE SURE TO ADD A SPACE AFTER THE TWO HYPHENS)
@@ -62,12 +64,16 @@ SELECT \* FROM users WHERE email = '' OR 1=1-- and password = $password;
 
 In SQL, the "-- " after 1 in the above command will comment whatever comes after them. This will literally tell the system/database to ignore 'and password = $password allowing an attacker to bypass authentication (Password checking) and retrieve the first user record in the database.
 
+## Link for the project
+
+https://bit.ly/maaun-21-cbs-0028
+
 ### Screenshots of the SQL Injection in Action
 
 Screenshot 1: Login Form Before SQL Injection.
 ![Login Form Before SQL Injection](assets/vulnerablebefore.png)
 
-Screenshot 2: Dashboard outlook after successfull SQL Injection Attack. ![Successful Login After SQL Injection](assets/vulnerableafter.png)
+Screenshot 2: Dashboard outlook after successful penetration (SQL Injection Attack). ![Successful Login After SQL Injection](assets/vulnerableafter.png)
 
 ### Secure Code Snippet
 
