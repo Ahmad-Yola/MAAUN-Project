@@ -44,6 +44,7 @@ $conn->close();
     <link rel="stylesheet" href="register.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Vulnerable Login</title>
+    <link rel="shortout icon" href="assets/logo.png" type="image/x-icon" />
 </head>
 <body>
     <div id="notification" class="notification"></div>

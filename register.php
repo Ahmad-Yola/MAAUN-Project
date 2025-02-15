@@ -36,6 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Register</title>
+    <link rel="shortout icon" href="assets/logo.png" type="image/x-icon" />
 </head>
 <body>
     <div id="notification" class="notification"></div> <!-- Notification container -->
