@@ -5,7 +5,8 @@ include 'db_connect.php'; // Include the connection file
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $email = $_POST["email"];
-    $password = password_hash($_POST["password"], PASSWORD_BCRYPT); // Secure password hashing
+    $password = $_POST["password"];
+    // $password = password_hash($_POST["password"], PASSWORD_BCRYPT); // Secure password hashing
 
     // Prepare and execute the SQL query using prepared statements
     $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
@@ -29,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="registerr.css">
+    <link rel="stylesheet" href="register.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
@@ -42,8 +43,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <img src="assets/logo.png">
         <h2>MAAUN/21/CBS/0028</h2>
     </div>
-    <div class="container">
-        <h2>Register</h2>
+    <div class="form-container">
+        <h2 style="color:#000">Register</h2>
         <form method="POST" action="register.php">
             <label for="username">Username:</label>
             <input type="text" name="username" required>

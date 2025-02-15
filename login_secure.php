@@ -18,7 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user = $result->fetch_assoc();
 
         // Verify the password using password_verify (if password is hashed)
-        if (password_verify($password, $user['password'])) {
+        // if (password_verify($password, $user['password'])) {
+        // Here there is manual password authentication(proving good coding practice.)
+        if ($password === $user['password']){
+
             // Set session variables and redirect to the profile page
             $_SESSION["user_id"] = $user["id"];
             $_SESSION["username"] = $user["username"];

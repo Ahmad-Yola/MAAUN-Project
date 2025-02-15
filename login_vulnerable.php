@@ -17,28 +17,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result && $result->num_rows > 0) {
         $user = $result->fetch_assoc();
 
-        // Here we do not check the password for the sake of the demonstration
+        // There is no manual password checking here (pointing bad coding practice).
         // Uncomment the following line if you want to see how it behaves with a password input
-        // if (password_verify($password, $user['password'])) {
+     
             $_SESSION["user_id"] = $user["id"];
             $_SESSION["username"] = $user["username"];
             header("Location: home.php");
             exit();
-        // } else {
-        //     $showNotificationScript = "<script>
-        //             document.addEventListener('DOMContentLoaded', function() {
-        //                 showNotification('Invalid password.', 'error');
-        //             });
-        //           </script>";
-        // }
-    } else {
-        $showNotificationScript = "<script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    showNotification('Wrong details, please try again!', 'error');
-                });
-              </script>";
+            
+         } else {
+             $showNotificationScript = "<script>
+                     document.addEventListener('DOMContentLoaded', function() {
+                         showNotification('Wrong details, please try again!.', 'error');
+                     });
+                   </script>";
+         }
     }
-}
 
 $conn->close();
 ?>
@@ -64,7 +58,6 @@ $conn->close();
         <h2>Vulnerable To SQL Attack!</h2>
         <form action="login_vulnerable.php" method="POST">
             <label for="email">Email: <span> Enter a payload like: <code>' OR 1=1-- </code></span>
-            <i class="bi bi-info-circle" title="This payload exploits an SQL injection vulnerability by bypassing authentication."></i>
         </label>
             <input type="text" name="email" required>
 

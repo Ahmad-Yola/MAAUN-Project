@@ -58,7 +58,7 @@ $conn->close();
         }
 
         .header img{
-            height: 60px;
+            height: 65px;
             width: 60px;
         }
 
@@ -98,12 +98,19 @@ $conn->close();
         }
         .actions ul li{
             display: inline-block;
-            height: 70px;
+            height: 90px;
             margin: 14px;
-            padding: 17px 8px;
+            padding: 17px 10px;
             border-radius: 7px;
+            cursor: pointer;
             box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.19);
-            width: 87px;
+            width: 85px;
+            transition: .3s;
+        }
+
+        .actions ul li:hover{
+            background-color:rgb(0, 87, 180);
+            color: #f5f5f5;
         }
         .actions ul li i{
             font-size: 1.25em;
@@ -111,6 +118,37 @@ $conn->close();
         .actions p{
             padding-top: 0px;
         }
+
+        @media screen and (min-width: 768px){
+            .header img{
+            height: 86px;
+            width: 80px;
+        }
+
+        .actions ul{
+           max-width: 700px;
+        }
+      
+        .actions ul li{
+            display: inline-block;
+            height: 130px;
+            width: 150px;
+            margin: 30px;
+            padding: 28px 10px;
+            border-radius: 7px;
+            cursor: pointer;
+            box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.19);
+        }
+        .actions ul li i{
+            font-size: 1.33em;
+        }
+        .actions p{
+            max-width: 80px;
+            justify-self: center;
+            padding-top: 16px;
+        }
+        }
+
     </style>
 </head>
 <body>
@@ -128,10 +166,10 @@ $conn->close();
     <div class="actions">
         <ul>
             <li><i class="bi bi-plus-circle"></i><p>Add Student</p></li>
-            <li><i class="bi bi-person-circle"></i><p>Broadcast Message</p></li>
+            <li><i class="bi bi-send"></i><p>Broadcast Message</p></li>
             <li><i class="bi bi-info-circle"></i><p>Students Details</p></li>
-            <li><i class="bi bi-person-circle"></i><p>Delete Record</p></li>
-            <li><i class="bi bi-person-circle"></i><p>Edit Assesments</p></li>
+            <li><i class="bi bi-trash"></i><p>Delete Record</p></li>
+            <li><i class="bi bi-pencil"></i><p>Edit Assesments</p></li>
             <li><i class="bi bi-arrow-up"></i><p>Publish Results</p></li>
 
         </ul>
