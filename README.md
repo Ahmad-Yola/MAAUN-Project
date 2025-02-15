@@ -134,6 +134,11 @@ $conn->close();
 
 ```
 
+### Screenshots of the secured version result
+
+Screenshot: Secured login form preventing SQL Injection.
+![Login Form Before SQL Injection](assets/SecuredLoginForm.png)
+
 ### Mitigation Explanation
 
 Prepared Statements prevent SQL injection by separating the SQL logic from the data input. When using prepared statements, user input is treated as data, not executable code. This means that even if an attacker tries to inject SQL code, it will not be executed as part of the SQL statement, protecting the application from unauthorized access.
