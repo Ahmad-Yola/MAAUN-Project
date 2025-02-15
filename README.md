@@ -67,7 +67,7 @@ In SQL, the "-- " after 1 in the above command will comment whatever comes after
 Screenshot 1: Login Form Before SQL Injection.
 ![Login Form Before SQL Injection](assets/vulnerablebefore.png)
 
-Screenshot 2: ![Successful Login After SQL Injection](assets/vulnerableafter.png)
+Screenshot 2: Dashboard outlook after successfull SQL Injection Attack. ![Successful Login After SQL Injection](assets/vulnerableafter.png)
 
 ### Secure Code Snippet
 
