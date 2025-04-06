@@ -58,7 +58,7 @@ $conn->close();
         <i class="bi bi-exclamation-triangle-fill"></i>
         <h2>Vulnerable To SQL Attack!</h2>
         <form action="login_vulnerable.php" method="POST">
-            <label for="email">Email: <span> Enter a payload like: <code>' OR 1=1-- </code></span>
+            <label for="email">Email: <span> Enter a payload like: <code>' OR 1=1-- </code></span><p class="tip">(make sure to add a space after the two hypens)</p>
         </label>
             <input type="text" name="email" required>
 

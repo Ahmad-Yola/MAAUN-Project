@@ -51,7 +51,12 @@ body {
   text-align: center;
   display: block;
 }
-
+.tip {
+  margin-top: 3px;
+  font-weight: 100;
+  color: #333;
+  font-size: 0.88em;
+}
 label {
   display: block;
   font-size: 1em;
