@@ -145,4 +145,4 @@ Prepared Statements prevent SQL injection by separating the SQL logic from the d
 
 # SQL Injection Demonstration
 
-# Bsc. CyberSecurity (MAAUN-Final-Year-Project) Developed By MAAUN/21/CBS/0028 (Ahmad Abdullahi Yola)
+# Bsc. CyberSecurity (MAAUN-Final-Year-Project)
